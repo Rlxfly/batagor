@@ -1,0 +1,10 @@
+C:\Fesnuk\C#\Laporan Tugas PL\FinalPrjk\FinalPrjk\bin\Debug\FinalPrjk.exe.config
+C:\Fesnuk\C#\Laporan Tugas PL\FinalPrjk\FinalPrjk\bin\Debug\FinalPrjk.exe
+C:\Fesnuk\C#\Laporan Tugas PL\FinalPrjk\FinalPrjk\bin\Debug\FinalPrjk.pdb
+C:\Fesnuk\C#\Laporan Tugas PL\FinalPrjk\FinalPrjk\obj\Debug\FinalPrjk.csproj.AssemblyReference.cache
+C:\Fesnuk\C#\Laporan Tugas PL\FinalPrjk\FinalPrjk\obj\Debug\FinalPrjk.Form1.resources
+C:\Fesnuk\C#\Laporan Tugas PL\FinalPrjk\FinalPrjk\obj\Debug\FinalPrjk.Properties.Resources.resources
+C:\Fesnuk\C#\Laporan Tugas PL\FinalPrjk\FinalPrjk\obj\Debug\FinalPrjk.csproj.GenerateResource.cache
+C:\Fesnuk\C#\Laporan Tugas PL\FinalPrjk\FinalPrjk\obj\Debug\FinalPrjk.csproj.CoreCompileInputs.cache
+C:\Fesnuk\C#\Laporan Tugas PL\FinalPrjk\FinalPrjk\obj\Debug\FinalPrjk.exe
+C:\Fesnuk\C#\Laporan Tugas PL\FinalPrjk\FinalPrjk\obj\Debug\FinalPrjk.pdb
