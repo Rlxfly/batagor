@@ -58,73 +58,24 @@ namespace FinalPrjk
             this.panelSidebar.Size = new System.Drawing.Size(170, 560);
             this.panelSidebar.TabIndex = 0;
             // 
-            // btnKeluar
+            // lblBrand
             // 
-            this.btnKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
-            this.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKeluar.Location = new System.Drawing.Point(12, 508);
-            this.btnKeluar.Name = "btnKeluar";
-            this.btnKeluar.Size = new System.Drawing.Size(146, 32);
-            this.btnKeluar.TabIndex = 7;
-            this.btnKeluar.Text = "Keluar";
-            this.btnKeluar.UseVisualStyleBackColor = false;
-            this.btnKeluar.Click += new System.EventHandler(this.btnKeluar_Click);
+            this.lblBrand.AutoSize = true;
+            this.lblBrand.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrand.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBrand.Location = new System.Drawing.Point(20, 24);
+            this.lblBrand.Name = "lblBrand";
+            this.lblBrand.Size = new System.Drawing.Size(130, 32);
+            this.lblBrand.TabIndex = 0;
+            this.lblBrand.Text = "Belanjaku";
             // 
-            // btnKategori
+            // lblUser
             // 
-            this.btnKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.btnKategori.FlatAppearance.BorderSize = 0;
-            this.btnKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKategori.Location = new System.Drawing.Point(12, 267);
-            this.btnKategori.Name = "btnKategori";
-            this.btnKategori.Size = new System.Drawing.Size(146, 32);
-            this.btnKategori.TabIndex = 6;
-            this.btnKategori.Text = "Data Kategori";
-            this.btnKategori.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKategori.UseVisualStyleBackColor = false;
-            this.btnKategori.Click += new System.EventHandler(this.Menu_Click);
-            // 
-            // btnToko
-            // 
-            this.btnToko.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.btnToko.FlatAppearance.BorderSize = 0;
-            this.btnToko.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToko.Location = new System.Drawing.Point(12, 229);
-            this.btnToko.Name = "btnToko";
-            this.btnToko.Size = new System.Drawing.Size(146, 32);
-            this.btnToko.TabIndex = 5;
-            this.btnToko.Text = "Data Toko";
-            this.btnToko.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnToko.UseVisualStyleBackColor = false;
-            this.btnToko.Click += new System.EventHandler(this.Menu_Click);
-            // 
-            // btnBarang
-            // 
-            this.btnBarang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.btnBarang.FlatAppearance.BorderSize = 0;
-            this.btnBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBarang.Location = new System.Drawing.Point(12, 191);
-            this.btnBarang.Name = "btnBarang";
-            this.btnBarang.Size = new System.Drawing.Size(146, 32);
-            this.btnBarang.TabIndex = 4;
-            this.btnBarang.Text = "Data Barang";
-            this.btnBarang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBarang.UseVisualStyleBackColor = false;
-            this.btnBarang.Click += new System.EventHandler(this.Menu_Click);
-            // 
-            // btnRiwayat
-            // 
-            this.btnRiwayat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.btnRiwayat.FlatAppearance.BorderSize = 0;
-            this.btnRiwayat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRiwayat.Location = new System.Drawing.Point(12, 153);
-            this.btnRiwayat.Name = "btnRiwayat";
-            this.btnRiwayat.Size = new System.Drawing.Size(146, 32);
-            this.btnRiwayat.TabIndex = 3;
-            this.btnRiwayat.Text = "Riwayat Belanja";
-            this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRiwayat.UseVisualStyleBackColor = false;
-            this.btnRiwayat.Click += new System.EventHandler(this.Menu_Click);
+            this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(63)))), ((int)(((byte)(0)))));
+            this.lblUser.Location = new System.Drawing.Point(14, 62);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(146, 40);
+            this.lblUser.TabIndex = 1;
             // 
             // btnCatat
             // 
@@ -140,24 +91,73 @@ namespace FinalPrjk
             this.btnCatat.UseVisualStyleBackColor = false;
             this.btnCatat.Click += new System.EventHandler(this.Menu_Click);
             // 
-            // lblUser
+            // btnRiwayat
             // 
-            this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(63)))), ((int)(((byte)(0)))));
-            this.lblUser.Location = new System.Drawing.Point(14, 62);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(146, 40);
-            this.lblUser.TabIndex = 1;
+            this.btnRiwayat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
+            this.btnRiwayat.FlatAppearance.BorderSize = 0;
+            this.btnRiwayat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRiwayat.Location = new System.Drawing.Point(12, 153);
+            this.btnRiwayat.Name = "btnRiwayat";
+            this.btnRiwayat.Size = new System.Drawing.Size(146, 32);
+            this.btnRiwayat.TabIndex = 3;
+            this.btnRiwayat.Text = "Riwayat Belanja";
+            this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRiwayat.UseVisualStyleBackColor = false;
+            this.btnRiwayat.Click += new System.EventHandler(this.Menu_Click);
             // 
-            // lblBrand
+            // btnBarang
             // 
-            this.lblBrand.AutoSize = true;
-            this.lblBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrand.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBrand.Location = new System.Drawing.Point(10, 24);
-            this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(160, 38);
-            this.lblBrand.TabIndex = 0;
-            this.lblBrand.Text = "Belanjaku";
+            this.btnBarang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
+            this.btnBarang.FlatAppearance.BorderSize = 0;
+            this.btnBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBarang.Location = new System.Drawing.Point(12, 191);
+            this.btnBarang.Name = "btnBarang";
+            this.btnBarang.Size = new System.Drawing.Size(146, 32);
+            this.btnBarang.TabIndex = 4;
+            this.btnBarang.Text = "Data Barang";
+            this.btnBarang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBarang.UseVisualStyleBackColor = false;
+            this.btnBarang.Click += new System.EventHandler(this.Menu_Click);
+            // 
+            // btnToko
+            // 
+            this.btnToko.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
+            this.btnToko.FlatAppearance.BorderSize = 0;
+            this.btnToko.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToko.Location = new System.Drawing.Point(12, 229);
+            this.btnToko.Name = "btnToko";
+            this.btnToko.Size = new System.Drawing.Size(146, 32);
+            this.btnToko.TabIndex = 5;
+            this.btnToko.Text = "Data Toko";
+            this.btnToko.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnToko.UseVisualStyleBackColor = false;
+            this.btnToko.Click += new System.EventHandler(this.Menu_Click);
+            // 
+            // btnKategori
+            // 
+            this.btnKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
+            this.btnKategori.FlatAppearance.BorderSize = 0;
+            this.btnKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKategori.Location = new System.Drawing.Point(12, 267);
+            this.btnKategori.Name = "btnKategori";
+            this.btnKategori.Size = new System.Drawing.Size(146, 32);
+            this.btnKategori.TabIndex = 6;
+            this.btnKategori.Text = "Data Kategori";
+            this.btnKategori.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKategori.UseVisualStyleBackColor = false;
+            this.btnKategori.Click += new System.EventHandler(this.Menu_Click);
+            // 
+            // btnKeluar
+            // 
+            this.btnKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
+            this.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKeluar.Location = new System.Drawing.Point(12, 508);
+            this.btnKeluar.Name = "btnKeluar";
+            this.btnKeluar.Size = new System.Drawing.Size(146, 32);
+            this.btnKeluar.TabIndex = 7;
+            this.btnKeluar.Text = "Keluar";
+            this.btnKeluar.UseVisualStyleBackColor = false;
+            this.btnKeluar.Click += new System.EventHandler(this.btnKeluar_Click);
             // 
             // panelContent
             // 

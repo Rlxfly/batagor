@@ -18,10 +18,13 @@ Kelompok 5 - IF03 - Pemrograman Lanjut (ST122), Universitas AMIKOM Yogyakarta.
 | Kepala Keluarga | `kepala` | `kepala123` | hanya melihat riwayat dan total per bulan |
 
 ## Struktur
-- `Data/` : akses database (`Db.cs`), hash password PBKDF2 (`Security.cs`), sesi login (`Session.cs`)
-- `Forms/` : login dan form entri terpisah (Kategori, Toko, Barang) 
-- `Controls/` : form list master (`MasterListControl`), riwayat belanja, catat belanjaan
-- `Form1` : jendela utama dengan sidebar navigasi
-- `Database/skema.sql` : skrip skema SQLite (sama dengan yang dijalankan otomatis oleh aplikasi)
+Semua file kode berada langsung di folder `FinalPrjk` (tanpa subfolder), kecuali `Properties` yang wajib ada di proyek C#.
+- `Db.cs`, `Security.cs`, `Session.cs` : akses database SQLite, hash password PBKDF2, sesi login
+- `LoginForm`, `Form1` : form login dan jendela utama dengan sidebar navigasi
+- `KategoriForm`, `TokoForm`, `BarangForm` : form list data master
+- `KategoriEntryForm`, `TokoEntryForm`, `BarangEntryForm` (turunan `EntryFormBase`) : form entri berupa dialog
+- `RiwayatControl`, `CatatBelanjaControl` : riwayat belanja dan catat belanjaan
+- `Ui.cs`, `ListHelper.cs` : pembantu tampilan dan pencarian
+- `Database/skema.sql` (di luar proyek) : skrip skema SQLite
 
 Kolom `pengguna.peran` (VARCHAR(20)) menyimpan kode singkat: `Anggota`, `Pengelola`, `Kepala`.

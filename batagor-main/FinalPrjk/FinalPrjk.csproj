@@ -33,9 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
-    </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
     </Reference>
@@ -58,77 +56,74 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Data\Db.cs" />
-    <Compile Include="Data\Security.cs" />
-    <Compile Include="Data\Session.cs" />
-    <Compile Include="Helpers\Ui.cs" />
-    <Compile Include="Helpers\ListHelper.cs" />
-    <Compile Include="Forms\KategoriForm.cs">
+    <Compile Include="Db.cs" />
+    <Compile Include="Security.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="Ui.cs" />
+    <Compile Include="ListHelper.cs" />
+    <Compile Include="KategoriForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\KategoriForm.Designer.cs">
+    <Compile Include="KategoriForm.Designer.cs">
       <DependentUpon>KategoriForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\TokoForm.cs">
+    <Compile Include="TokoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\TokoForm.Designer.cs">
+    <Compile Include="TokoForm.Designer.cs">
       <DependentUpon>TokoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BarangForm.cs">
+    <Compile Include="BarangForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BarangForm.Designer.cs">
+    <Compile Include="BarangForm.Designer.cs">
       <DependentUpon>BarangForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EntryFormBase.cs">
+    <Compile Include="EntryFormBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EntryFormBase.Designer.cs">
+    <Compile Include="EntryFormBase.Designer.cs">
       <DependentUpon>EntryFormBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\KategoriEntryForm.cs">
+    <Compile Include="KategoriEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\KategoriEntryForm.Designer.cs">
+    <Compile Include="KategoriEntryForm.Designer.cs">
       <DependentUpon>KategoriEntryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\TokoEntryForm.cs">
+    <Compile Include="TokoEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\TokoEntryForm.Designer.cs">
+    <Compile Include="TokoEntryForm.Designer.cs">
       <DependentUpon>TokoEntryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BarangEntryForm.cs">
+    <Compile Include="BarangEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BarangEntryForm.Designer.cs">
+    <Compile Include="BarangEntryForm.Designer.cs">
       <DependentUpon>BarangEntryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginForm.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoginForm.Designer.cs">
+    <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CatatBelanjaControl.cs">
+    <Compile Include="CatatBelanjaControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\CatatBelanjaControl.Designer.cs">
+    <Compile Include="CatatBelanjaControl.Designer.cs">
       <DependentUpon>CatatBelanjaControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\RiwayatControl.cs">
+    <Compile Include="RiwayatControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\RiwayatControl.Designer.cs">
+    <Compile Include="RiwayatControl.Designer.cs">
       <DependentUpon>RiwayatControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TokoForm.resx">
-      <DependentUpon>TokoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -156,10 +151,12 @@
   <ItemGroup>
     <Content Include="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\x86\SQLite.Interop.dll" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\x86\SQLite.Interop.dll')">
       <Link>x86\SQLite.Interop.dll</Link>
+      <Visible>false</Visible>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\x64\SQLite.Interop.dll" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\x64\SQLite.Interop.dll')">
       <Link>x64\SQLite.Interop.dll</Link>
+      <Visible>false</Visible>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -167,7 +164,7 @@
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>Paket NuGet belum ter-restore. Klik kanan Solution &gt; Restore NuGet Packages, lalu build ulang.</ErrorText>
+      <ErrorText>Paket NuGet belum ter-restore. Klik kanan Solution > Restore NuGet Packages, lalu build ulang.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)'))" />
   </Target>
