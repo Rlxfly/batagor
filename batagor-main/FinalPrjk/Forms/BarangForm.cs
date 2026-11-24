@@ -1,6 +1,6 @@
 using System;
 using System.Data;
-using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Windows.Forms;
 
 namespace FinalPrjk
@@ -110,9 +110,9 @@ namespace FinalPrjk
                 Db.Exec(SqlDelete, Db.P("@id", id));
                 LoadData();
             }
-            catch (SqlException ex)
+            catch (SQLiteException ex)
             {
-                if (ex.Number == 547)
+                if (ex.ResultCode == SQLiteErrorCode.Constraint || ex.Message.Contains("constraint"))
                     Ui.Warn("Data ini tidak dapat dihapus karena masih dipakai oleh data lain.");
                 else
                     Ui.Warn("Data gagal dihapus: " + ex.Message);

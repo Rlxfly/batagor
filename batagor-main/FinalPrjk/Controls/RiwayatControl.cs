@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.Data;
-using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Windows.Forms;
 
 namespace FinalPrjk
@@ -143,16 +143,16 @@ namespace FinalPrjk
 
             try
             {
-                using (SqlConnection conn = Db.Open())
-                using (SqlTransaction tx = conn.BeginTransaction())
+                using (SQLiteConnection conn = Db.Open())
+                using (SQLiteTransaction tx = conn.BeginTransaction())
                 {
                     try
                     {
-                        using (SqlCommand c1 = Db.Command(conn, tx, "DELETE FROM detail_belanja WHERE id_belanja=@id", Db.P("@id", id)))
+                        using (SQLiteCommand c1 = Db.Command(conn, tx, "DELETE FROM detail_belanja WHERE id_belanja=@id", Db.P("@id", id)))
                         {
                             c1.ExecuteNonQuery();
                         }
-                        using (SqlCommand c2 = Db.Command(conn, tx, "DELETE FROM belanja WHERE id_belanja=@id", Db.P("@id", id)))
+                        using (SQLiteCommand c2 = Db.Command(conn, tx, "DELETE FROM belanja WHERE id_belanja=@id", Db.P("@id", id)))
                         {
                             c2.ExecuteNonQuery();
                         }

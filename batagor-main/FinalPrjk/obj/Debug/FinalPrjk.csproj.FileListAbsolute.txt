@@ -1,10 +1,16 @@
-D:\semester 3\pemrog lanjut\Template Laporan UTS Pemrograman Lanjut\batagor-main\batagor-main\FinalPrjk\bin\Debug\FinalPrjk.exe.config
-D:\semester 3\pemrog lanjut\Template Laporan UTS Pemrograman Lanjut\batagor-main\batagor-main\FinalPrjk\bin\Debug\FinalPrjk.exe
-D:\semester 3\pemrog lanjut\Template Laporan UTS Pemrograman Lanjut\batagor-main\batagor-main\FinalPrjk\bin\Debug\FinalPrjk.pdb
-D:\semester 3\pemrog lanjut\Template Laporan UTS Pemrograman Lanjut\batagor-main\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.csproj.AssemblyReference.cache
-D:\semester 3\pemrog lanjut\Template Laporan UTS Pemrograman Lanjut\batagor-main\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.Form1.resources
-D:\semester 3\pemrog lanjut\Template Laporan UTS Pemrograman Lanjut\batagor-main\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.Properties.Resources.resources
-D:\semester 3\pemrog lanjut\Template Laporan UTS Pemrograman Lanjut\batagor-main\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.csproj.GenerateResource.cache
-D:\semester 3\pemrog lanjut\Template Laporan UTS Pemrograman Lanjut\batagor-main\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.csproj.CoreCompileInputs.cache
-D:\semester 3\pemrog lanjut\Template Laporan UTS Pemrograman Lanjut\batagor-main\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.exe
-D:\semester 3\pemrog lanjut\Template Laporan UTS Pemrograman Lanjut\batagor-main\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.pdb
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\bin\Debug\FinalPrjk.exe.config
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\bin\Debug\FinalPrjk.exe
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\bin\Debug\FinalPrjk.pdb
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\bin\Debug\System.Data.SQLite.dll
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\bin\Debug\System.Data.SQLite.xml
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.csproj.AssemblyReference.cache
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.Form1.resources
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.Properties.Resources.resources
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.csproj.GenerateResource.cache
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.csproj.CoreCompileInputs.cache
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.csproj.Up2Date
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.exe
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.pdb
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\bin\Debug\x86\SQLite.Interop.dll
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\bin\Debug\x64\SQLite.Interop.dll
+C:\Users\asus\Pictures\Screenshots\batagor-main\FinalPrjk\obj\Debug\FinalPrjk.exe.config

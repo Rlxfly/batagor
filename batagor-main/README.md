@@ -5,10 +5,10 @@ Kelompok 5 - IF03 - Pemrograman Lanjut (ST122), Universitas AMIKOM Yogyakarta.
 
 ## Cara menjalankan
 1. Buka `FinalPrjk.slnx` di Visual Studio 2022 (workload ".NET desktop development").
-2. Tekan **F5**. Saat pertama dijalankan, aplikasi membuat sendiri database `DbBelanjaKeluarga`
-   di SQL Server LocalDB beserta 6 tabel dan data awal (kategori, toko, barang).
-3. Bila memakai SQL Server Express, ubah `Data Source` pada `connectionStrings` di `App.config`
-   (mis. `.\SQLEXPRESS`).
+2. Klik kanan Solution > **Restore NuGet Packages** (mengunduh System.Data.SQLite), lalu **Build > Rebuild Solution**.
+3. Tekan **F5**. Saat pertama dijalankan, aplikasi membuat sendiri file database `belanjaku.db`
+   (di `FinalPrjk\bin\Debug`) beserta 6 tabel dan data awal. Tidak perlu memasang SQL Server.
+4. Untuk mengembalikan data ke kondisi awal, tutup aplikasi lalu hapus file `belanjaku.db`.
 
 ## Akun contoh
 | Peran | Username | Password | Hak akses |
@@ -22,6 +22,6 @@ Kelompok 5 - IF03 - Pemrograman Lanjut (ST122), Universitas AMIKOM Yogyakarta.
 - `Forms/` : login dan form entri terpisah (Kategori, Toko, Barang) 
 - `Controls/` : form list master (`MasterListControl`), riwayat belanja, catat belanjaan
 - `Form1` : jendela utama dengan sidebar navigasi
-- `Database/skema.sql` : skrip skema (sama dengan yang dijalankan otomatis oleh aplikasi)
+- `Database/skema.sql` : skrip skema SQLite (sama dengan yang dijalankan otomatis oleh aplikasi)
 
 Kolom `pengguna.peran` (VARCHAR(20)) menyimpan kode singkat: `Anggota`, `Pengelola`, `Kepala`.

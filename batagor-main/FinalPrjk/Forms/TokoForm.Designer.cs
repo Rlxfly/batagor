@@ -49,20 +49,21 @@ namespace FinalPrjk
             // lblJudul
             // 
             this.lblJudul.AutoSize = true;
-            this.lblJudul.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJudul.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJudul.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(63)))), ((int)(((byte)(0)))));
             this.lblJudul.Location = new System.Drawing.Point(24, 22);
             this.lblJudul.Name = "lblJudul";
-            this.lblJudul.Size = new System.Drawing.Size(160, 28);
+            this.lblJudul.Size = new System.Drawing.Size(151, 36);
             this.lblJudul.TabIndex = 0;
             this.lblJudul.Text = "Data Toko";
+            this.lblJudul.Click += new System.EventHandler(this.lblJudul_Click);
             // 
             // lblCari
             // 
             this.lblCari.AutoSize = true;
             this.lblCari.Location = new System.Drawing.Point(24, 70);
             this.lblCari.Name = "lblCari";
-            this.lblCari.Size = new System.Drawing.Size(27, 15);
+            this.lblCari.Size = new System.Drawing.Size(42, 25);
             this.lblCari.TabIndex = 1;
             this.lblCari.Text = "Cari";
             // 
@@ -70,7 +71,7 @@ namespace FinalPrjk
             // 
             this.txtCari.Location = new System.Drawing.Point(70, 66);
             this.txtCari.Name = "txtCari";
-            this.txtCari.Size = new System.Drawing.Size(260, 23);
+            this.txtCari.Size = new System.Drawing.Size(260, 31);
             this.txtCari.TabIndex = 2;
             this.txtCari.TextChanged += new System.EventHandler(this.txtCari_TextChanged);
             // 
@@ -83,9 +84,9 @@ namespace FinalPrjk
             this.gridData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridData.BackgroundColor = System.Drawing.Color.White;
-            this.gridData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(212)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(63)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(212)))), ((int)(((byte)(191)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(63)))), ((int)(((byte)(0)))));
@@ -93,9 +94,12 @@ namespace FinalPrjk
             this.gridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colId, this.colNama, this.colLokasi});
+            this.colId,
+            this.colNama,
+            this.colLokasi});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -107,6 +111,7 @@ namespace FinalPrjk
             this.gridData.Name = "gridData";
             this.gridData.ReadOnly = true;
             this.gridData.RowHeadersVisible = false;
+            this.gridData.RowHeadersWidth = 62;
             this.gridData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridData.Size = new System.Drawing.Size(682, 370);
             this.gridData.TabIndex = 3;
@@ -116,6 +121,7 @@ namespace FinalPrjk
             // 
             this.colId.DataPropertyName = "ID";
             this.colId.HeaderText = "ID";
+            this.colId.MinimumWidth = 8;
             this.colId.Name = "colId";
             this.colId.ReadOnly = true;
             this.colId.Visible = false;
@@ -124,6 +130,7 @@ namespace FinalPrjk
             // 
             this.colNama.DataPropertyName = "Nama Toko";
             this.colNama.HeaderText = "Nama Toko";
+            this.colNama.MinimumWidth = 8;
             this.colNama.Name = "colNama";
             this.colNama.ReadOnly = true;
             // 
@@ -131,6 +138,7 @@ namespace FinalPrjk
             // 
             this.colLokasi.DataPropertyName = "Lokasi";
             this.colLokasi.HeaderText = "Lokasi";
+            this.colLokasi.MinimumWidth = 8;
             this.colLokasi.Name = "colLokasi";
             this.colLokasi.ReadOnly = true;
             // 
@@ -146,29 +154,14 @@ namespace FinalPrjk
             this.panelBar.Size = new System.Drawing.Size(682, 44);
             this.panelBar.TabIndex = 4;
             // 
-            // btnTambah
+            // lblJumlah
             // 
-            this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(255)))), ((int)(((byte)(214)))));
-            this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTambah.Location = new System.Drawing.Point(11, 6);
-            this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(100, 32);
-            this.btnTambah.TabIndex = 0;
-            this.btnTambah.Text = "Tambah";
-            this.btnTambah.UseVisualStyleBackColor = false;
-            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
-            // 
-            // btnUbah
-            // 
-            this.btnUbah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.btnUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUbah.Location = new System.Drawing.Point(121, 6);
-            this.btnUbah.Name = "btnUbah";
-            this.btnUbah.Size = new System.Drawing.Size(100, 32);
-            this.btnUbah.TabIndex = 1;
-            this.btnUbah.Text = "Ubah";
-            this.btnUbah.UseVisualStyleBackColor = false;
-            this.btnUbah.Click += new System.EventHandler(this.btnUbah_Click);
+            this.lblJumlah.Location = new System.Drawing.Point(482, 6);
+            this.lblJumlah.Name = "lblJumlah";
+            this.lblJumlah.Size = new System.Drawing.Size(190, 32);
+            this.lblJumlah.TabIndex = 3;
+            this.lblJumlah.Text = "Jumlah data: 0";
+            this.lblJumlah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnHapus
             // 
@@ -182,14 +175,29 @@ namespace FinalPrjk
             this.btnHapus.UseVisualStyleBackColor = false;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
-            // lblJumlah
+            // btnUbah
             // 
-            this.lblJumlah.Location = new System.Drawing.Point(482, 6);
-            this.lblJumlah.Name = "lblJumlah";
-            this.lblJumlah.Size = new System.Drawing.Size(190, 32);
-            this.lblJumlah.TabIndex = 3;
-            this.lblJumlah.Text = "Jumlah data: 0";
-            this.lblJumlah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUbah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.btnUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUbah.Location = new System.Drawing.Point(121, 6);
+            this.btnUbah.Name = "btnUbah";
+            this.btnUbah.Size = new System.Drawing.Size(100, 32);
+            this.btnUbah.TabIndex = 1;
+            this.btnUbah.Text = "Ubah";
+            this.btnUbah.UseVisualStyleBackColor = false;
+            this.btnUbah.Click += new System.EventHandler(this.btnUbah_Click);
+            // 
+            // btnTambah
+            // 
+            this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(255)))), ((int)(((byte)(214)))));
+            this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTambah.Location = new System.Drawing.Point(11, 6);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(100, 32);
+            this.btnTambah.TabIndex = 0;
+            this.btnTambah.Text = "Tambah";
+            this.btnTambah.UseVisualStyleBackColor = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // TokoForm
             // 

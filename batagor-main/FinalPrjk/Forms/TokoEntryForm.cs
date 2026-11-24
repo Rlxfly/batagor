@@ -34,7 +34,7 @@ namespace FinalPrjk
                 return false;
             }
             int sama = Convert.ToInt32(Db.Scalar(
-                "SELECT COUNT(*) FROM toko WHERE nama_toko=@n AND ISNULL(lokasi,'')=@l AND id_toko<>@id",
+                "SELECT COUNT(*) FROM toko WHERE nama_toko=@n AND IFNULL(lokasi,'')=@l AND id_toko<>@id",
                 Db.P("@n", nama), Db.P("@l", txtLokasi.Text.Trim()), Db.P("@id", _id)));
             if (sama > 0)
             {

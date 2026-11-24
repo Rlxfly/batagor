@@ -25,7 +25,7 @@ namespace FinalPrjk
                 {
                     txtNama.Text = Convert.ToString(dt.Rows[0]["nama_barang"]);
                     cmbSatuan.Text = Convert.ToString(dt.Rows[0]["satuan"]);
-                    cmbKategori.SelectedValue = Convert.ToInt32(dt.Rows[0]["id_kategori"]);
+                    cmbKategori.SelectedValue = Convert.ToInt64(dt.Rows[0]["id_kategori"]);
                 }
             }
         }

@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.Data;
-using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -50,7 +50,7 @@ namespace FinalPrjk
                 cmbToko.ValueMember = "id_toko";
 
                 cmbBarang.DataSource = Db.Query(
-                    "SELECT id_barang, nama_barang, satuan, nama_barang + ' (' + satuan + ')' AS label " +
+                    "SELECT id_barang, nama_barang, satuan, nama_barang || ' (' || satuan || ')' AS label " +
                     "FROM barang ORDER BY nama_barang");
                 cmbBarang.DisplayMember = "label";
                 cmbBarang.ValueMember = "id_barang";
@@ -90,7 +90,7 @@ namespace FinalPrjk
                 EditId = idBelanja;
                 lblMode.Text = "Mengubah nota #" + idBelanja;
                 dtpTanggal.Value = Convert.ToDateTime(h.Rows[0]["tanggal"]);
-                cmbToko.SelectedValue = Convert.ToInt32(h.Rows[0]["id_toko"]);
+                cmbToko.SelectedValue = Convert.ToInt64(h.Rows[0]["id_toko"]);
 
                 _items.Clear();
                 foreach (DataRow r in d.Rows)
@@ -214,34 +214,35 @@ namespace FinalPrjk
             decimal total = HitungTotal();
             int idToko = Convert.ToInt32(cmbToko.SelectedValue);
 
-            using (SqlConnection conn = Db.Open())
-            using (SqlTransaction tx = conn.BeginTransaction())
+            using (SQLiteConnection conn = Db.Open())
+            using (SQLiteTransaction tx = conn.BeginTransaction())
             {
                 try
                 {
                     int idBelanja;
                     if (EditId == 0)
                     {
-                        using (SqlCommand cmd = Db.Command(conn, tx,
+                        using (SQLiteCommand cmd = Db.Command(conn, tx,
                             "INSERT INTO belanja (tanggal, id_toko, id_pengguna, total_belanja) " +
-                            "OUTPUT INSERTED.id_belanja VALUES (@t, @toko, @user, @total)",
+                            "VALUES (@t, @toko, @user, @total)",
                             Db.PDate("@t", dtpTanggal.Value), Db.P("@toko", idToko),
                             Db.P("@user", Session.IdPengguna), Db.PMoney("@total", total)))
                         {
-                            idBelanja = Convert.ToInt32(cmd.ExecuteScalar());
+                            cmd.ExecuteNonQuery();
                         }
+                        idBelanja = (int)conn.LastInsertRowId;
                     }
                     else
                     {
                         idBelanja = EditId;
-                        using (SqlCommand cmd = Db.Command(conn, tx,
+                        using (SQLiteCommand cmd = Db.Command(conn, tx,
                             "UPDATE belanja SET tanggal=@t, id_toko=@toko, total_belanja=@total WHERE id_belanja=@id",
                             Db.PDate("@t", dtpTanggal.Value), Db.P("@toko", idToko),
                             Db.PMoney("@total", total), Db.P("@id", idBelanja)))
                         {
                             cmd.ExecuteNonQuery();
                         }
-                        using (SqlCommand cmd = Db.Command(conn, tx,
+                        using (SQLiteCommand cmd = Db.Command(conn, tx,
                             "DELETE FROM detail_belanja WHERE id_belanja=@id", Db.P("@id", idBelanja)))
                         {
                             cmd.ExecuteNonQuery();
@@ -250,7 +251,7 @@ namespace FinalPrjk
 
                     foreach (DataRow r in _items.Rows)
                     {
-                        using (SqlCommand cmd = Db.Command(conn, tx,
+                        using (SQLiteCommand cmd = Db.Command(conn, tx,
                             "INSERT INTO detail_belanja (id_belanja, id_barang, jumlah, harga_satuan, subtotal) " +
                             "VALUES (@b, @barang, @jml, @harga, @sub)",
                             Db.P("@b", idBelanja), Db.P("@barang", Convert.ToInt32(r["id_barang"])),
